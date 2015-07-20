@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'ExpandableColumnLayout_Example', :exclusive => true do
+  pod "ExpandableColumnLayout", :path => "../"
+end
+
+target 'ExpandableColumnLayout_Tests', :exclusive => true do
+  pod "ExpandableColumnLayout", :path => "../"
+
+  
+end
