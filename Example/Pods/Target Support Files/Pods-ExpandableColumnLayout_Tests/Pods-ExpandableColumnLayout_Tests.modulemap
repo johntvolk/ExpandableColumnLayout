@@ -1,0 +1,6 @@
+framework module Pods_ExpandableColumnLayout_Tests {
+  umbrella header "Pods-ExpandableColumnLayout_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

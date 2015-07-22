@@ -1,0 +1,782 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03C595781B5ED4740075D25E /* ExpandableColumnLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C595761B5ED4740075D25E /* ExpandableColumnLayout.swift */; };
+		03C595791B5ED4740075D25E /* ExpandableColumnLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C595771B5ED4740075D25E /* ExpandableColumnLayoutDelegate.swift */; };
+		577120E3164445188E268E78C6403D85 /* Pods-ExpandableColumnLayout_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 508288B6C45EC3400987DA49BE5D2093 /* Pods-ExpandableColumnLayout_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D1A5DD79E7090E44E170AC4C75AE66C /* ExpandableColumnLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D854D4D57073C1A2C3A7ECE140705C /* ExpandableColumnLayout-dummy.m */; };
+		643B25D14ECB67301B956CCB2A78426A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9E043C67D0E21A9ED21EC996BF7E63D /* Foundation.framework */; };
+		7079BAB66DF2D7BE3A786AA91C15E9FA /* ExpandableColumnLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 560CFD187F8BF93395029E8019273653 /* ExpandableColumnLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8309B7FA39DB6B688752978FF677BC69 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9E043C67D0E21A9ED21EC996BF7E63D /* Foundation.framework */; };
+		83C6A763DD955AF140E21F4219CB3D7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9E043C67D0E21A9ED21EC996BF7E63D /* Foundation.framework */; };
+		A96021683EF6C5659A8D40FE70B22C22 /* Pods-ExpandableColumnLayout_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7377CFF1699D1AC78721A36FC4362E7 /* Pods-ExpandableColumnLayout_Example-dummy.m */; };
+		E0612A3AE1660BCB1F4DB0FBDA2888A0 /* Pods-ExpandableColumnLayout_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B5978D73BFAF6CB0A070BEB7CC4FAD62 /* Pods-ExpandableColumnLayout_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E07EEC7EC725955957C784CFD1AA7CDD /* ExpandableColumnLayout.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D0F8EA8D8FA43B3EE1B47BC03491BA27 /* ExpandableColumnLayout.bundle */; };
+		F9B3FD3563B07BAF2B536345F1C0B858 /* Pods-ExpandableColumnLayout_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 736469425E1A6D87417CA7AB7BE4CEDE /* Pods-ExpandableColumnLayout_Tests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		537E72E60991FAE49940D4C6B2CE9D66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDE4344B0A04DC8B7076995D0BF0D165;
+			remoteInfo = ExpandableColumnLayout;
+		};
+		9A190D7785B5001DAC50ECFC462F3D7D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3902C0C80013A9F3FBE97494DBD00D3D;
+			remoteInfo = "ExpandableColumnLayout-ExpandableColumnLayout";
+		};
+		CC1EEDD346D179B62FDE27DEB6101699 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDE4344B0A04DC8B7076995D0BF0D165;
+			remoteInfo = ExpandableColumnLayout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		007D8E0243EF0E81A5187C7DC7E21394 /* Pods-ExpandableColumnLayout_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExpandableColumnLayout_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		01659122E812A2D5A4059862E79D7B70 /* Pods-ExpandableColumnLayout_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExpandableColumnLayout_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		03C595761B5ED4740075D25E /* ExpandableColumnLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableColumnLayout.swift; sourceTree = "<group>"; };
+		03C595771B5ED4740075D25E /* ExpandableColumnLayoutDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableColumnLayoutDelegate.swift; sourceTree = "<group>"; };
+		1B8BF790E43CFAFEFA01E30B8B4065D2 /* ExpandableColumnLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ExpandableColumnLayout.modulemap; sourceTree = "<group>"; };
+		23F98C3F90D0D331BBDE21F009236202 /* Pods-ExpandableColumnLayout_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExpandableColumnLayout_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		33D854D4D57073C1A2C3A7ECE140705C /* ExpandableColumnLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ExpandableColumnLayout-dummy.m"; sourceTree = "<group>"; };
+		393A9BF89E1B308280FB597FC8860CE1 /* Pods-ExpandableColumnLayout_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExpandableColumnLayout_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		3CAAD84B1FE5BD9D6DDF94318C624158 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		415059E5EE658D56BB47E64A87411234 /* Pods-ExpandableColumnLayout_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExpandableColumnLayout_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		47AA894C6EC260F4F208EE0CA23E00DF /* Pods_ExpandableColumnLayout_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExpandableColumnLayout_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		508288B6C45EC3400987DA49BE5D2093 /* Pods-ExpandableColumnLayout_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ExpandableColumnLayout_Example-umbrella.h"; sourceTree = "<group>"; };
+		54680A5C8A297A294B546F6065A283BB /* ExpandableColumnLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ExpandableColumnLayout-prefix.pch"; sourceTree = "<group>"; };
+		560CFD187F8BF93395029E8019273653 /* ExpandableColumnLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ExpandableColumnLayout-umbrella.h"; sourceTree = "<group>"; };
+		5AEE7D48EDC6EA0E062875705F4411DE /* Pods_ExpandableColumnLayout_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExpandableColumnLayout_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		646E47AD0BC7F0B2DA86874E98FDA4CD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		736469425E1A6D87417CA7AB7BE4CEDE /* Pods-ExpandableColumnLayout_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ExpandableColumnLayout_Tests-dummy.m"; sourceTree = "<group>"; };
+		7A5585F0CEF05190BBA3B2D2F72C3EAF /* Pods-ExpandableColumnLayout_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExpandableColumnLayout_Example.release.xcconfig"; sourceTree = "<group>"; };
+		9621C57B0ACFDBC936F31F02FC0BFE71 /* Pods-ExpandableColumnLayout_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ExpandableColumnLayout_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9A83CDBD9AAB52332C6149DAB989EE66 /* ExpandableColumnLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ExpandableColumnLayout.xcconfig; sourceTree = "<group>"; };
+		A4984737D1265421ED53942CA6CD71F5 /* Pods-ExpandableColumnLayout_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExpandableColumnLayout_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		A54030C8811D8C4ADAF22094E9CA5826 /* ExpandableColumnLayout-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ExpandableColumnLayout-Private.xcconfig"; sourceTree = "<group>"; };
+		A63C9E2D669F891CE13AD369F1C9B714 /* ExpandableColumnLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ExpandableColumnLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9D674891CFCBBBD8C3F7C6F36EA81EC /* Pods-ExpandableColumnLayout_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExpandableColumnLayout_Example-frameworks.sh"; sourceTree = "<group>"; };
+		B3FA7B29903E9412A7C59135CE07B0A8 /* Pods-ExpandableColumnLayout_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ExpandableColumnLayout_Example.modulemap"; sourceTree = "<group>"; };
+		B5978D73BFAF6CB0A070BEB7CC4FAD62 /* Pods-ExpandableColumnLayout_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ExpandableColumnLayout_Tests-umbrella.h"; sourceTree = "<group>"; };
+		C3FCE32654A2A18CB841A1264531926F /* Pods-ExpandableColumnLayout_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExpandableColumnLayout_Example-resources.sh"; sourceTree = "<group>"; };
+		C88113A79685B4EFEE7BAD12896829F7 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D0F8EA8D8FA43B3EE1B47BC03491BA27 /* ExpandableColumnLayout.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpandableColumnLayout.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		D10BFF69BC0E100C6645D98EEB8D9048 /* Pods-ExpandableColumnLayout_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ExpandableColumnLayout_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DE0EEDA4B402D92D394E4C69E45C413B /* Pods-ExpandableColumnLayout_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ExpandableColumnLayout_Tests.modulemap"; sourceTree = "<group>"; };
+		E094FFA9F2D2987FB99FC5FA85A9D0BC /* Pods-ExpandableColumnLayout_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExpandableColumnLayout_Tests-resources.sh"; sourceTree = "<group>"; };
+		E7377CFF1699D1AC78721A36FC4362E7 /* Pods-ExpandableColumnLayout_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ExpandableColumnLayout_Example-dummy.m"; sourceTree = "<group>"; };
+		E9E043C67D0E21A9ED21EC996BF7E63D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		F0485F75D303B83B935761902163B26B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13D703A78998222DD630D71D5C2B2C32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8309B7FA39DB6B688752978FF677BC69 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CEFD71DFD52A30BFA56C42F19EE35A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83C6A763DD955AF140E21F4219CB3D7C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0B42321AD049981D8AFC500D93C8F24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D33DEC0113E9529707B2BC2837A5A0D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				643B25D14ECB67301B956CCB2A78426A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0720760E6FAA87218C034E98CCD3509B /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8EC070B5BAC0CF006B7BD6DD2071B6AD /* ExpandableColumnLayout */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		321B90CE68349685CA947D5E0CA45324 /* Pods-ExpandableColumnLayout_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3CAAD84B1FE5BD9D6DDF94318C624158 /* Info.plist */,
+				DE0EEDA4B402D92D394E4C69E45C413B /* Pods-ExpandableColumnLayout_Tests.modulemap */,
+				D10BFF69BC0E100C6645D98EEB8D9048 /* Pods-ExpandableColumnLayout_Tests-acknowledgements.markdown */,
+				01659122E812A2D5A4059862E79D7B70 /* Pods-ExpandableColumnLayout_Tests-acknowledgements.plist */,
+				736469425E1A6D87417CA7AB7BE4CEDE /* Pods-ExpandableColumnLayout_Tests-dummy.m */,
+				393A9BF89E1B308280FB597FC8860CE1 /* Pods-ExpandableColumnLayout_Tests-frameworks.sh */,
+				E094FFA9F2D2987FB99FC5FA85A9D0BC /* Pods-ExpandableColumnLayout_Tests-resources.sh */,
+				B5978D73BFAF6CB0A070BEB7CC4FAD62 /* Pods-ExpandableColumnLayout_Tests-umbrella.h */,
+				A4984737D1265421ED53942CA6CD71F5 /* Pods-ExpandableColumnLayout_Tests.debug.xcconfig */,
+				007D8E0243EF0E81A5187C7DC7E21394 /* Pods-ExpandableColumnLayout_Tests.release.xcconfig */,
+			);
+			name = "Pods-ExpandableColumnLayout_Tests";
+			path = "Target Support Files/Pods-ExpandableColumnLayout_Tests";
+			sourceTree = "<group>";
+		};
+		33A2DFA941E11F4B5B7E005D2FE0A3E5 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				E9E043C67D0E21A9ED21EC996BF7E63D /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5E1F3384B1B39575144FEBFCF3210CCC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33A2DFA941E11F4B5B7E005D2FE0A3E5 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				C88113A79685B4EFEE7BAD12896829F7 /* Podfile */,
+				0720760E6FAA87218C034E98CCD3509B /* Development Pods */,
+				5E1F3384B1B39575144FEBFCF3210CCC /* Frameworks */,
+				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
+				D871C749CBB672E76A502DD5E90F9842 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8EC070B5BAC0CF006B7BD6DD2071B6AD /* ExpandableColumnLayout */ = {
+			isa = PBXGroup;
+			children = (
+				F44D5F8D6BD829E9334EA340E2671693 /* Pod */,
+				D51562C229CA932D557F732CDF02E72C /* Support Files */,
+			);
+			name = ExpandableColumnLayout;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		98376A17780BA36A2EFF6B336298405F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				03C595761B5ED4740075D25E /* ExpandableColumnLayout.swift */,
+				03C595771B5ED4740075D25E /* ExpandableColumnLayoutDelegate.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0F8EA8D8FA43B3EE1B47BC03491BA27 /* ExpandableColumnLayout.bundle */,
+				A63C9E2D669F891CE13AD369F1C9B714 /* ExpandableColumnLayout.framework */,
+				5AEE7D48EDC6EA0E062875705F4411DE /* Pods_ExpandableColumnLayout_Example.framework */,
+				47AA894C6EC260F4F208EE0CA23E00DF /* Pods_ExpandableColumnLayout_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D51562C229CA932D557F732CDF02E72C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1B8BF790E43CFAFEFA01E30B8B4065D2 /* ExpandableColumnLayout.modulemap */,
+				9A83CDBD9AAB52332C6149DAB989EE66 /* ExpandableColumnLayout.xcconfig */,
+				A54030C8811D8C4ADAF22094E9CA5826 /* ExpandableColumnLayout-Private.xcconfig */,
+				33D854D4D57073C1A2C3A7ECE140705C /* ExpandableColumnLayout-dummy.m */,
+				54680A5C8A297A294B546F6065A283BB /* ExpandableColumnLayout-prefix.pch */,
+				560CFD187F8BF93395029E8019273653 /* ExpandableColumnLayout-umbrella.h */,
+				F0485F75D303B83B935761902163B26B /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/ExpandableColumnLayout";
+			sourceTree = "<group>";
+		};
+		D871C749CBB672E76A502DD5E90F9842 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED347F2E5D1117BFAB23C7BEAE1BDBF5 /* Pods-ExpandableColumnLayout_Example */,
+				321B90CE68349685CA947D5E0CA45324 /* Pods-ExpandableColumnLayout_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		ED347F2E5D1117BFAB23C7BEAE1BDBF5 /* Pods-ExpandableColumnLayout_Example */ = {
+			isa = PBXGroup;
+			children = (
+				646E47AD0BC7F0B2DA86874E98FDA4CD /* Info.plist */,
+				B3FA7B29903E9412A7C59135CE07B0A8 /* Pods-ExpandableColumnLayout_Example.modulemap */,
+				9621C57B0ACFDBC936F31F02FC0BFE71 /* Pods-ExpandableColumnLayout_Example-acknowledgements.markdown */,
+				23F98C3F90D0D331BBDE21F009236202 /* Pods-ExpandableColumnLayout_Example-acknowledgements.plist */,
+				E7377CFF1699D1AC78721A36FC4362E7 /* Pods-ExpandableColumnLayout_Example-dummy.m */,
+				A9D674891CFCBBBD8C3F7C6F36EA81EC /* Pods-ExpandableColumnLayout_Example-frameworks.sh */,
+				C3FCE32654A2A18CB841A1264531926F /* Pods-ExpandableColumnLayout_Example-resources.sh */,
+				508288B6C45EC3400987DA49BE5D2093 /* Pods-ExpandableColumnLayout_Example-umbrella.h */,
+				415059E5EE658D56BB47E64A87411234 /* Pods-ExpandableColumnLayout_Example.debug.xcconfig */,
+				7A5585F0CEF05190BBA3B2D2F72C3EAF /* Pods-ExpandableColumnLayout_Example.release.xcconfig */,
+			);
+			name = "Pods-ExpandableColumnLayout_Example";
+			path = "Target Support Files/Pods-ExpandableColumnLayout_Example";
+			sourceTree = "<group>";
+		};
+		F44D5F8D6BD829E9334EA340E2671693 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				98376A17780BA36A2EFF6B336298405F /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5E5957D9FE1800A36CA828CCD9C0B944 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				577120E3164445188E268E78C6403D85 /* Pods-ExpandableColumnLayout_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8520E455317AC6D6D5F9613C95225C25 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7079BAB66DF2D7BE3A786AA91C15E9FA /* ExpandableColumnLayout-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0ACD5D375303E5990C6A34751FA8240 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0612A3AE1660BCB1F4DB0FBDA2888A0 /* Pods-ExpandableColumnLayout_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3902C0C80013A9F3FBE97494DBD00D3D /* ExpandableColumnLayout-ExpandableColumnLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C349686275812E03996FBA984F18EF98 /* Build configuration list for PBXNativeTarget "ExpandableColumnLayout-ExpandableColumnLayout" */;
+			buildPhases = (
+				EB76F4194A8E7F4BE7CDBC095124FCB4 /* Sources */,
+				B0B42321AD049981D8AFC500D93C8F24 /* Frameworks */,
+				61CCCDC0F59DB515C04620E9609A8697 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ExpandableColumnLayout-ExpandableColumnLayout";
+			productName = "ExpandableColumnLayout-ExpandableColumnLayout";
+			productReference = D0F8EA8D8FA43B3EE1B47BC03491BA27 /* ExpandableColumnLayout.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		C4CBC266B5CECB08D0E63DD675D1F32B /* Pods-ExpandableColumnLayout_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 332792F6DBC15F9E242B42ABEF469A46 /* Build configuration list for PBXNativeTarget "Pods-ExpandableColumnLayout_Tests" */;
+			buildPhases = (
+				E9F0C5DBE78578884658E4E5BB3757FC /* Sources */,
+				13D703A78998222DD630D71D5C2B2C32 /* Frameworks */,
+				F0ACD5D375303E5990C6A34751FA8240 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				363D96C042D4F485082A7D426065E74F /* PBXTargetDependency */,
+			);
+			name = "Pods-ExpandableColumnLayout_Tests";
+			productName = "Pods-ExpandableColumnLayout_Tests";
+			productReference = 47AA894C6EC260F4F208EE0CA23E00DF /* Pods_ExpandableColumnLayout_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E36EB77B5DE75C6D161EF134329C6B0B /* Pods-ExpandableColumnLayout_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EB15D02FB7F14843555CF11879ACE5A /* Build configuration list for PBXNativeTarget "Pods-ExpandableColumnLayout_Example" */;
+			buildPhases = (
+				8DFFADDDDD7C5E4EC895BF5CA69842CF /* Sources */,
+				9CEFD71DFD52A30BFA56C42F19EE35A2 /* Frameworks */,
+				5E5957D9FE1800A36CA828CCD9C0B944 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				54AFFCCF1E7E7ECE5BCEED66651730F9 /* PBXTargetDependency */,
+			);
+			name = "Pods-ExpandableColumnLayout_Example";
+			productName = "Pods-ExpandableColumnLayout_Example";
+			productReference = 5AEE7D48EDC6EA0E062875705F4411DE /* Pods_ExpandableColumnLayout_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EDE4344B0A04DC8B7076995D0BF0D165 /* ExpandableColumnLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26A9700E6FA05F6BE0AB6FF272F632F2 /* Build configuration list for PBXNativeTarget "ExpandableColumnLayout" */;
+			buildPhases = (
+				3115459D06D26EAB2FF6837169EAE95A /* Sources */,
+				D33DEC0113E9529707B2BC2837A5A0D3 /* Frameworks */,
+				698B9C3B247007FF173D48D5623E4F1A /* Resources */,
+				8520E455317AC6D6D5F9613C95225C25 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C0807B3F6EBFF963CF0FDC016ACEA8BC /* PBXTargetDependency */,
+			);
+			name = ExpandableColumnLayout;
+			productName = ExpandableColumnLayout;
+			productReference = A63C9E2D669F891CE13AD369F1C9B714 /* ExpandableColumnLayout.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDE4344B0A04DC8B7076995D0BF0D165 /* ExpandableColumnLayout */,
+				3902C0C80013A9F3FBE97494DBD00D3D /* ExpandableColumnLayout-ExpandableColumnLayout */,
+				E36EB77B5DE75C6D161EF134329C6B0B /* Pods-ExpandableColumnLayout_Example */,
+				C4CBC266B5CECB08D0E63DD675D1F32B /* Pods-ExpandableColumnLayout_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		61CCCDC0F59DB515C04620E9609A8697 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		698B9C3B247007FF173D48D5623E4F1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E07EEC7EC725955957C784CFD1AA7CDD /* ExpandableColumnLayout.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3115459D06D26EAB2FF6837169EAE95A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03C595791B5ED4740075D25E /* ExpandableColumnLayoutDelegate.swift in Sources */,
+				5D1A5DD79E7090E44E170AC4C75AE66C /* ExpandableColumnLayout-dummy.m in Sources */,
+				03C595781B5ED4740075D25E /* ExpandableColumnLayout.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DFFADDDDD7C5E4EC895BF5CA69842CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A96021683EF6C5659A8D40FE70B22C22 /* Pods-ExpandableColumnLayout_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9F0C5DBE78578884658E4E5BB3757FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9B3FD3563B07BAF2B536345F1C0B858 /* Pods-ExpandableColumnLayout_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB76F4194A8E7F4BE7CDBC095124FCB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		363D96C042D4F485082A7D426065E74F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ExpandableColumnLayout;
+			target = EDE4344B0A04DC8B7076995D0BF0D165 /* ExpandableColumnLayout */;
+			targetProxy = CC1EEDD346D179B62FDE27DEB6101699 /* PBXContainerItemProxy */;
+		};
+		54AFFCCF1E7E7ECE5BCEED66651730F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ExpandableColumnLayout;
+			target = EDE4344B0A04DC8B7076995D0BF0D165 /* ExpandableColumnLayout */;
+			targetProxy = 537E72E60991FAE49940D4C6B2CE9D66 /* PBXContainerItemProxy */;
+		};
+		C0807B3F6EBFF963CF0FDC016ACEA8BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ExpandableColumnLayout-ExpandableColumnLayout";
+			target = 3902C0C80013A9F3FBE97494DBD00D3D /* ExpandableColumnLayout-ExpandableColumnLayout */;
+			targetProxy = 9A190D7785B5001DAC50ECFC462F3D7D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0D5C795FCC29298ED1357B1840E132C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A54030C8811D8C4ADAF22094E9CA5826 /* ExpandableColumnLayout-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ExpandableColumnLayout/ExpandableColumnLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ExpandableColumnLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ExpandableColumnLayout/ExpandableColumnLayout.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ExpandableColumnLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0DB4F8E15F5E4A488BC5F718861691EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A54030C8811D8C4ADAF22094E9CA5826 /* ExpandableColumnLayout-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = ExpandableColumnLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		23A57824834E0666C481F1CE03A4A913 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A5585F0CEF05190BBA3B2D2F72C3EAF /* Pods-ExpandableColumnLayout_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ExpandableColumnLayout_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-ExpandableColumnLayout_Example/Pods-ExpandableColumnLayout_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_ExpandableColumnLayout_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2E2FE3061BBF0178B73470F3A8AA31DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		430D957BFAF7718E6B2F752530B3CF72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4984737D1265421ED53942CA6CD71F5 /* Pods-ExpandableColumnLayout_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ExpandableColumnLayout_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-ExpandableColumnLayout_Tests/Pods-ExpandableColumnLayout_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_ExpandableColumnLayout_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6B8FB47DDBFBDCFF701E1DE36BA257D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A54030C8811D8C4ADAF22094E9CA5826 /* ExpandableColumnLayout-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ExpandableColumnLayout/ExpandableColumnLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ExpandableColumnLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ExpandableColumnLayout/ExpandableColumnLayout.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ExpandableColumnLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6F93059F67547298C52592EF226E07FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A54030C8811D8C4ADAF22094E9CA5826 /* ExpandableColumnLayout-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = ExpandableColumnLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		853C4D0228E2976904F6509808493C9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 415059E5EE658D56BB47E64A87411234 /* Pods-ExpandableColumnLayout_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ExpandableColumnLayout_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-ExpandableColumnLayout_Example/Pods-ExpandableColumnLayout_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_ExpandableColumnLayout_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8A33C58E06990E8552148F3AFC88F8C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 007D8E0243EF0E81A5187C7DC7E21394 /* Pods-ExpandableColumnLayout_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ExpandableColumnLayout_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-ExpandableColumnLayout_Tests/Pods-ExpandableColumnLayout_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_ExpandableColumnLayout_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8BD0950CC7213622BB48FEAFE5931E57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26A9700E6FA05F6BE0AB6FF272F632F2 /* Build configuration list for PBXNativeTarget "ExpandableColumnLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B8FB47DDBFBDCFF701E1DE36BA257D4 /* Debug */,
+				0D5C795FCC29298ED1357B1840E132C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BD0950CC7213622BB48FEAFE5931E57 /* Debug */,
+				2E2FE3061BBF0178B73470F3A8AA31DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2EB15D02FB7F14843555CF11879ACE5A /* Build configuration list for PBXNativeTarget "Pods-ExpandableColumnLayout_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				853C4D0228E2976904F6509808493C9E /* Debug */,
+				23A57824834E0666C481F1CE03A4A913 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		332792F6DBC15F9E242B42ABEF469A46 /* Build configuration list for PBXNativeTarget "Pods-ExpandableColumnLayout_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				430D957BFAF7718E6B2F752530B3CF72 /* Debug */,
+				8A33C58E06990E8552148F3AFC88F8C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C349686275812E03996FBA984F18EF98 /* Build configuration list for PBXNativeTarget "ExpandableColumnLayout-ExpandableColumnLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F93059F67547298C52592EF226E07FE /* Debug */,
+				0DB4F8E15F5E4A488BC5F718861691EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

@@ -1,0 +1,14 @@
+PODS:
+  - ExpandableColumnLayout (0.1.0)
+
+DEPENDENCIES:
+  - ExpandableColumnLayout (from `../`)
+
+EXTERNAL SOURCES:
+  ExpandableColumnLayout:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ExpandableColumnLayout: 2df883bee96d12e2672cf905505cf1c0cae76f9c
+
+COCOAPODS: 0.38.0

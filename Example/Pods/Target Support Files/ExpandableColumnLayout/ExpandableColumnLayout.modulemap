@@ -1,0 +1,6 @@
+framework module ExpandableColumnLayout {
+  umbrella header "ExpandableColumnLayout-umbrella.h"
+
+  export *
+  module * { export * }
+}
