@@ -22,7 +22,7 @@ pod "ExpandableColumnLayout"
 
 ## Author
 
-John Volk, john.volk@novu.com
+John Volk, john.t.volk@gmail.com
 
 ## License
 

@@ -88,7 +88,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, ExpandableCo
                 withReuseIdentifier: EXAMPLE_SECTION_BACKGROUND_REUSE_ID,
                 forIndexPath: indexPath) as! UICollectionReusableView;
             
-            exampleBackground.backgroundColor = UIColor.lightGrayColor();
+            exampleBackground.backgroundColor = self.collectionView.backgroundColor;
             
             return exampleBackground;
         }
@@ -116,51 +116,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, ExpandableCo
         return CGSize(width: CGRectGetWidth(collectionView.bounds), height: 44.0);
     }
     
-    /*func headerTapped(recognizer: HeaderTapRecognizer) {
-        let section = recognizer.section;
-        let itemCount = self.sections[section].1;
-        var itemsToInsert = [NSIndexPath]();
-        var itemsToDelete = [NSIndexPath]();
-        
-        if self.expandedSections.contains(section) {
-            self.expandedSections.remove(section);
-            
-            for i in 0 ..< itemCount {
-                itemsToDelete.append(NSIndexPath(forItem: i, inSection: section));
-            }
-        } else {
-            self.expandedSections.insert(section);
-            
-            for i in 0 ..< itemCount {
-                itemsToInsert.append(NSIndexPath(forItem: i, inSection: section));
-            }
-        }
-        
-        UIView.animateWithDuration(0.4, animations: { () -> Void in
-            self.collectionView.performBatchUpdates({ [weak self] () -> Void in
-                if let capturedSelf = self {
-                    capturedSelf.collectionView.insertItemsAtIndexPaths(itemsToInsert);
-                    capturedSelf.collectionView.deleteItemsAtIndexPaths(itemsToDelete);
-                }
-                }, completion: { [weak self] (finished: Bool) -> Void in
-                    if let firstInsert = itemsToInsert.first {
-                        if let capturedSelf = self {
-                            capturedSelf.collectionView.scrollToItemAtIndexPath(firstInsert,
-                                atScrollPosition: UICollectionViewScrollPosition.CenteredVertically, animated: true);
-                        }
-                    }
-                });
-        });
-    }*/
-    
     func headerTapped(recognizer: HeaderTapRecognizer) {
         let section = recognizer.section;
         let itemCount = self.sections[section].1;
         var itemsToInsert = [NSIndexPath]();
         var itemsToDelete = [NSIndexPath]();
-        
-        
-        
+
         if self.expandedSections.contains(section) {
             self.expandedSections.remove(section);
             
@@ -187,7 +148,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, ExpandableCo
             }
         }
         
-        UIView.animateWithDuration(0.4, animations: { () -> Void in
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
             self.collectionView.performBatchUpdates({ [weak self] () -> Void in
                 if let capturedSelf = self {
                     capturedSelf.collectionView.insertItemsAtIndexPaths(itemsToInsert);

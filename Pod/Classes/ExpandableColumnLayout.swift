@@ -269,6 +269,8 @@ public class ExpandableColumnLayout: UICollectionViewLayout {
                                     self.initialItemOverrides[currentIndexPath] = self.buildFadeOverride(self.itemLayoutAttrs[currentIndexPath]);
                                 } else { // Expand whole section.
                                     self.initialItemOverrides[currentIndexPath] = self.buildSlideOverride(self.itemLayoutAttrs[currentIndexPath],
+                                        startingHeaderAttrs: self.headerLayoutAttrs[deltaSectionIndexPath],
+                                        endingHeaderAttrs: self.previousHeaderLayoutAttrs[deltaSectionIndexPath],
                                         sectionHeight: self.sectionHeights[currentIndexPath.section]);
                                 }
                             } else {
@@ -278,6 +280,8 @@ public class ExpandableColumnLayout: UICollectionViewLayout {
                                     self.finalItemOverrides[currentIndexPath] = self.buildFadeOverride(self.previousItemLayoutAttrs[currentIndexPath]);
                                 } else { // Collapse whole section.
                                     self.finalItemOverrides[currentIndexPath] = self.buildSlideOverride(self.previousItemLayoutAttrs[currentIndexPath],
+                                        startingHeaderAttrs: self.previousHeaderLayoutAttrs[deltaSectionIndexPath],
+                                        endingHeaderAttrs: self.headerLayoutAttrs[deltaSectionIndexPath],
                                         sectionHeight: self.previousSectionHeights[currentIndexPath.section]);
                                 }
                             }
@@ -369,14 +373,17 @@ public class ExpandableColumnLayout: UICollectionViewLayout {
         return updatedExpandedSections;
     }
     
-    private func buildSlideOverride(itemAttrs: UICollectionViewLayoutAttributes?, sectionHeight: CGFloat?) -> UICollectionViewLayoutAttributes? {
+    private func buildSlideOverride(itemAttrs: UICollectionViewLayoutAttributes?, startingHeaderAttrs: UICollectionViewLayoutAttributes?,
+        endingHeaderAttrs: UICollectionViewLayoutAttributes?, sectionHeight: CGFloat?) -> UICollectionViewLayoutAttributes? {
             if let itemAttrs = itemAttrs {
                 let result = itemAttrs.copy() as! UICollectionViewLayoutAttributes;
                 let resultFrame = result.frame;
                 var yPosition = resultFrame.origin.y;
                 
-                if let sectionHeight = sectionHeight {
-                    yPosition = resultFrame.origin.y - sectionHeight;
+                if let sectionHeight = sectionHeight, startingHeaderAttrs = startingHeaderAttrs, endingHeaderAttrs = endingHeaderAttrs {
+                    let offset = (startingHeaderAttrs.frame.origin.y + sectionHeight) - resultFrame.origin.y;
+
+                    yPosition = endingHeaderAttrs.frame.origin.y - offset;
                 } else {
                     result.alpha = 0.0;
                 }
