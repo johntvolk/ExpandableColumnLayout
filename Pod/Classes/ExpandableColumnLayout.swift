@@ -51,6 +51,7 @@ public class ExpandableColumnLayout: UICollectionViewLayout {
             
             for i in 0 ..< collectionView.numberOfSections() {
                 let sectionYOrigin = self.totalHeight;
+                var sectionHeight: CGFloat = 0.0;
                 
                 if let headerSize = delegate.collectionView?(collectionView, layout: self, sizeForHeaderInSection: i) { // Add header.
                     if headerSize != CGSizeZero {
@@ -79,58 +80,56 @@ public class ExpandableColumnLayout: UICollectionViewLayout {
                 
                 if numItems > 0 {
                     self.totalHeight += sectionInsets.top;
-                }
-                
-                for j in 0 ..< numItems { // Add items.
-                    let indexPath = NSIndexPath(forItem: j, inSection: i);
-                    let column = j % numColumns;
-                    var currentColumnHeight: CGFloat = 0.0;
-                    var height: CGFloat = 0.0;
-                    
-                    if let exactHeight = delegate.collectionView?(collectionView, layout: self, itemHasExactHeightAtIndexPath: indexPath) where exactHeight {
-                        height = delegate.collectionView!(collectionView, layout: self, exactHeightForItemAtIndexPath: indexPath, withWidth: columnWidth);
-                    } else if let unitHeight = delegate.collectionView?(collectionView, layout: self, unitHeightForItemAtIndexPath: indexPath) {
-                        let baseHeight = Int(floor(columnWidth * baseHeightMultiplier));
+
+                    for j in 0 ..< numItems { // Add items.
+                        let indexPath = NSIndexPath(forItem: j, inSection: i);
+                        let column = j % numColumns;
+                        var currentColumnHeight: CGFloat = 0.0;
+                        var height: CGFloat = 0.0;
                         
-                        height = CGFloat(baseHeight * unitHeight) + (interitemSpacing * CGFloat(unitHeight - 1));
-                    } else {
-                        NSException(name: "Height Required",
-                            reason: "ExpandleColumnLayoutDelegate must specify either a unitHeight or exactHeight for every item.",
-                            userInfo: nil).raise();
+                        if let exactHeight = delegate.collectionView?(collectionView, layout: self, itemHasExactHeightAtIndexPath: indexPath) where exactHeight {
+                            height = delegate.collectionView!(collectionView, layout: self, exactHeightForItemAtIndexPath: indexPath, withWidth: columnWidth);
+                        } else if let unitHeight = delegate.collectionView?(collectionView, layout: self, unitHeightForItemAtIndexPath: indexPath) {
+                            let baseHeight = Int(floor(columnWidth * baseHeightMultiplier));
+                            
+                            height = CGFloat(baseHeight * unitHeight) + (interitemSpacing * CGFloat(unitHeight - 1));
+                        } else {
+                            NSException(name: "Height Required",
+                                reason: "ExpandleColumnLayoutDelegate must specify either a unitHeight or exactHeight for every item.",
+                                userInfo: nil).raise();
+                        }
+                        
+                        let addSpacing = j < numItems - numColumns;
+                        
+                        if let columnHeight = columnHeights[column] {
+                            currentColumnHeight = columnHeight;
+                            columnHeights[column] = height + columnHeight + (addSpacing ? interitemSpacing : 0.0);
+                        } else {
+                            columnHeights[column] = currentColumnHeight + height + (addSpacing ? interitemSpacing : 0.0)
+                        }
+                        
+                        xPosition = column == 0 ? sectionInsets.left : xPosition;
+                        xPosition = xPosition + (column != 0 ? interitemSpacing : 0.0);
+                        
+                        let attrs = UICollectionViewLayoutAttributes(forCellWithIndexPath: indexPath);
+                        
+                        attrs.zIndex = zIndex;
+                        attrs.frame = CGRect(x: xPosition, y: currentColumnHeight + self.totalHeight, width: columnWidth, height: height);
+                        self.itemLayoutAttrs[indexPath] = attrs;
+                        
+                        xPosition += columnWidth;
                     }
                     
-                    let addSpacing = j < numItems - numColumns;
+                    var maxSectionHeight: CGFloat = 0.0;
                     
-                    if let columnHeight = columnHeights[column] {
-                        currentColumnHeight = columnHeight;
-                        columnHeights[column] = height + columnHeight + (addSpacing ? interitemSpacing : 0.0);
-                    } else {
-                        columnHeights[column] = currentColumnHeight + height + (addSpacing ? interitemSpacing : 0.0)
+                    for (column, height) in columnHeights {
+                        maxSectionHeight = maxSectionHeight < height ? height : maxSectionHeight;
                     }
                     
-                    xPosition = column == 0 ? sectionInsets.left : xPosition;
-                    xPosition = xPosition + (column != 0 ? interitemSpacing : 0.0);
-                    
-                    let attrs = UICollectionViewLayoutAttributes(forCellWithIndexPath: indexPath);
-                    
-                    attrs.zIndex = zIndex;
-                    attrs.frame = CGRect(x: xPosition, y: currentColumnHeight + self.totalHeight, width: columnWidth, height: height);
-                    self.itemLayoutAttrs[indexPath] = attrs;
-                    
-                    xPosition += columnWidth;
-                }
-                
-                var maxSectionHeight: CGFloat = 0.0;
-                
-                for (column, height) in columnHeights {
-                    maxSectionHeight = maxSectionHeight < height ? height : maxSectionHeight;
-                }
-                
-                columnHeights.removeAll(keepCapacity: true);
-                self.totalHeight += maxSectionHeight;
-                
-                if numItems > 0 {
+                    columnHeights.removeAll(keepCapacity: true);
+                    self.totalHeight += maxSectionHeight;
                     self.totalHeight += sectionInsets.bottom;
+                    sectionHeight = maxSectionHeight + sectionInsets.top + sectionInsets.bottom;
                 }
                 
                 zIndex--;
@@ -143,7 +142,7 @@ public class ExpandableColumnLayout: UICollectionViewLayout {
                 attrs.frame = CGRect(x: 0.0, y: sectionYOrigin, width: frame.size.width, height: self.totalHeight - sectionYOrigin);
                 
                 self.backgroundLayoutAttrs[backgroundIndexPath] = attrs;
-                self.sectionHeights[i] = maxSectionHeight + sectionInsets.top + sectionInsets.bottom;
+                self.sectionHeights[i] = sectionHeight;
             }
         }
     }
