@@ -1,5 +1,5 @@
 //
-//  TwoColumnLayout.swift
+//  ExpandableColumnLayout.swift
 //  Novu
 //
 //  Created by John Volk on 6/30/14.
@@ -13,20 +13,20 @@ public let ExpandableColumnLayoutSectionBackgroundKind = "columnLayoutSectionBac
 
 public class ExpandableColumnLayout: UICollectionViewLayout {
     
-    var itemLayoutAttrs = [NSIndexPath: UICollectionViewLayoutAttributes]();
-    var previousItemLayoutAttrs = [NSIndexPath: UICollectionViewLayoutAttributes]();
-    var initialItemOverrides = [NSIndexPath: UICollectionViewLayoutAttributes]();
-    var finalItemOverrides = [NSIndexPath: UICollectionViewLayoutAttributes]();
-    var headerLayoutAttrs = [NSIndexPath: UICollectionViewLayoutAttributes]();
-    var previousHeaderLayoutAttrs = [NSIndexPath: UICollectionViewLayoutAttributes]();
-    var backgroundLayoutAttrs = [NSIndexPath: UICollectionViewLayoutAttributes]();
-    var previousBackgroundLayoutAttrs = [NSIndexPath: UICollectionViewLayoutAttributes]();
-    var initialSupplementaryOverrides = [NSIndexPath: UICollectionViewLayoutAttributes]();
-    var finalSupplementaryOverrides = [NSIndexPath: UICollectionViewLayoutAttributes]();
-    var expandedSections = [Int: Bool]();
-    var sectionHeights = [Int: CGFloat]();
-    var previousSectionHeights = [Int: CGFloat]();
-    var totalHeight: CGFloat = 0.0;
+    private var itemLayoutAttrs = [NSIndexPath: UICollectionViewLayoutAttributes]();
+    private var previousItemLayoutAttrs = [NSIndexPath: UICollectionViewLayoutAttributes]();
+    private var initialItemOverrides = [NSIndexPath: UICollectionViewLayoutAttributes]();
+    private var finalItemOverrides = [NSIndexPath: UICollectionViewLayoutAttributes]();
+    private var headerLayoutAttrs = [NSIndexPath: UICollectionViewLayoutAttributes]();
+    private var previousHeaderLayoutAttrs = [NSIndexPath: UICollectionViewLayoutAttributes]();
+    private var backgroundLayoutAttrs = [NSIndexPath: UICollectionViewLayoutAttributes]();
+    private var previousBackgroundLayoutAttrs = [NSIndexPath: UICollectionViewLayoutAttributes]();
+    private var initialSupplementaryOverrides = [NSIndexPath: UICollectionViewLayoutAttributes]();
+    private var finalSupplementaryOverrides = [NSIndexPath: UICollectionViewLayoutAttributes]();
+    private var expandedSections = [Int: Bool]();
+    private var sectionHeights = [Int: CGFloat]();
+    private var previousSectionHeights = [Int: CGFloat]();
+    private var totalHeight: CGFloat = 0.0;
 
     override public func prepareLayout() {
         super.prepareLayout();
@@ -94,9 +94,7 @@ public class ExpandableColumnLayout: UICollectionViewLayout {
                             
                             height = CGFloat(baseHeight * unitHeight) + (interitemSpacing * CGFloat(unitHeight - 1));
                         } else {
-                            NSException(name: "Height Required",
-                                reason: "ExpandleColumnLayoutDelegate must specify either a unitHeight or exactHeight for every item.",
-                                userInfo: nil).raise();
+                            fatalError("ExpandleColumnLayoutDelegate must specify either a unitHeight or exactHeight for every item.");
                         }
                         
                         let addSpacing = j < numItems - numColumns;

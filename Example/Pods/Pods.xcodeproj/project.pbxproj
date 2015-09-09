@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		033A0B7D1B9F411A00CA0BA3 /* ExpandableColumnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033A0B7C1B9F411A00CA0BA3 /* ExpandableColumnViewController.swift */; };
 		03C595781B5ED4740075D25E /* ExpandableColumnLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C595761B5ED4740075D25E /* ExpandableColumnLayout.swift */; };
 		03C595791B5ED4740075D25E /* ExpandableColumnLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C595771B5ED4740075D25E /* ExpandableColumnLayoutDelegate.swift */; };
 		577120E3164445188E268E78C6403D85 /* Pods-ExpandableColumnLayout_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 508288B6C45EC3400987DA49BE5D2093 /* Pods-ExpandableColumnLayout_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		007D8E0243EF0E81A5187C7DC7E21394 /* Pods-ExpandableColumnLayout_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExpandableColumnLayout_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		01659122E812A2D5A4059862E79D7B70 /* Pods-ExpandableColumnLayout_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExpandableColumnLayout_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		033A0B7C1B9F411A00CA0BA3 /* ExpandableColumnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableColumnViewController.swift; sourceTree = "<group>"; };
 		03C595761B5ED4740075D25E /* ExpandableColumnLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableColumnLayout.swift; sourceTree = "<group>"; };
 		03C595771B5ED4740075D25E /* ExpandableColumnLayoutDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableColumnLayoutDelegate.swift; sourceTree = "<group>"; };
 		1B8BF790E43CFAFEFA01E30B8B4065D2 /* ExpandableColumnLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ExpandableColumnLayout.modulemap; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			children = (
 				03C595761B5ED4740075D25E /* ExpandableColumnLayout.swift */,
 				03C595771B5ED4740075D25E /* ExpandableColumnLayoutDelegate.swift */,
+				033A0B7C1B9F411A00CA0BA3 /* ExpandableColumnViewController.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				033A0B7D1B9F411A00CA0BA3 /* ExpandableColumnViewController.swift in Sources */,
 				03C595791B5ED4740075D25E /* ExpandableColumnLayoutDelegate.swift in Sources */,
 				5D1A5DD79E7090E44E170AC4C75AE66C /* ExpandableColumnLayout-dummy.m in Sources */,
 				03C595781B5ED4740075D25E /* ExpandableColumnLayout.swift in Sources */,
