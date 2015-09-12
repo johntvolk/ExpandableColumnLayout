@@ -1,9 +1,9 @@
 //
 //  ExpandableColumnLayout.swift
-//  Novu
+//  Pods
 //
 //  Created by John Volk on 6/30/14.
-//  Copyright (c) 2014 Novu. All rights reserved.
+//  Copyright (c) 2015 John Volk. All rights reserved.
 //
 
 import UIKit

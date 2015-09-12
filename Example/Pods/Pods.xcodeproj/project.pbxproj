@@ -16,6 +16,7 @@
 		7079BAB66DF2D7BE3A786AA91C15E9FA /* ExpandableColumnLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 560CFD187F8BF93395029E8019273653 /* ExpandableColumnLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8309B7FA39DB6B688752978FF677BC69 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9E043C67D0E21A9ED21EC996BF7E63D /* Foundation.framework */; };
 		83C6A763DD955AF140E21F4219CB3D7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9E043C67D0E21A9ED21EC996BF7E63D /* Foundation.framework */; };
+		8D982DC71BA4AAF300E686A4 /* SectionExpander.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D982DC61BA4AAF300E686A4 /* SectionExpander.swift */; };
 		A96021683EF6C5659A8D40FE70B22C22 /* Pods-ExpandableColumnLayout_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7377CFF1699D1AC78721A36FC4362E7 /* Pods-ExpandableColumnLayout_Example-dummy.m */; };
 		E0612A3AE1660BCB1F4DB0FBDA2888A0 /* Pods-ExpandableColumnLayout_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B5978D73BFAF6CB0A070BEB7CC4FAD62 /* Pods-ExpandableColumnLayout_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E07EEC7EC725955957C784CFD1AA7CDD /* ExpandableColumnLayout.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D0F8EA8D8FA43B3EE1B47BC03491BA27 /* ExpandableColumnLayout.bundle */; };
@@ -66,6 +67,7 @@
 		646E47AD0BC7F0B2DA86874E98FDA4CD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		736469425E1A6D87417CA7AB7BE4CEDE /* Pods-ExpandableColumnLayout_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ExpandableColumnLayout_Tests-dummy.m"; sourceTree = "<group>"; };
 		7A5585F0CEF05190BBA3B2D2F72C3EAF /* Pods-ExpandableColumnLayout_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExpandableColumnLayout_Example.release.xcconfig"; sourceTree = "<group>"; };
+		8D982DC61BA4AAF300E686A4 /* SectionExpander.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionExpander.swift; sourceTree = "<group>"; };
 		9621C57B0ACFDBC936F31F02FC0BFE71 /* Pods-ExpandableColumnLayout_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ExpandableColumnLayout_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9A83CDBD9AAB52332C6149DAB989EE66 /* ExpandableColumnLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ExpandableColumnLayout.xcconfig; sourceTree = "<group>"; };
 		A4984737D1265421ED53942CA6CD71F5 /* Pods-ExpandableColumnLayout_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExpandableColumnLayout_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				03C595761B5ED4740075D25E /* ExpandableColumnLayout.swift */,
 				03C595771B5ED4740075D25E /* ExpandableColumnLayoutDelegate.swift */,
 				033A0B7C1B9F411A00CA0BA3 /* ExpandableColumnViewController.swift */,
+				8D982DC61BA4AAF300E686A4 /* SectionExpander.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				03C595791B5ED4740075D25E /* ExpandableColumnLayoutDelegate.swift in Sources */,
 				5D1A5DD79E7090E44E170AC4C75AE66C /* ExpandableColumnLayout-dummy.m in Sources */,
 				03C595781B5ED4740075D25E /* ExpandableColumnLayout.swift in Sources */,
+				8D982DC71BA4AAF300E686A4 /* SectionExpander.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
