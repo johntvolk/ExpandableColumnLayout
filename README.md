@@ -61,7 +61,7 @@ optional func collectionView(collectionView: UICollectionView,
 
 #### ExpandableColumnViewController Implementation
 
-The quickest way to get going is to subclass the provided `ExpandableColumnViewController`. This is the method used in the example project. When you subclass `ExpandableColumnViewController` there are two methods that you need to override in addition to the standard `ExpandableColumnLayoutDelegate` / `UICollectionViewDelegate` / `UICollectionViewDataSource` methods.
+The quickest way to get going is to subclass the provided `ExpandableColumnViewController`. This is the method used in the example project. When you subclass `ExpandableColumnViewController` there are two methods that you need to override.
 
 ```swift
 public func numberOfItemsInExpandedSection(section: Int) -> Int {
