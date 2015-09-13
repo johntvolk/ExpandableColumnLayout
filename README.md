@@ -24,7 +24,7 @@ pod "ExpandableColumnLayout"
 
 ## Usage
 
-`ExpanableColumnLayout` relies on an instance of `ExpandableColumnLayoutDelegate` to provide the information it needs to build the layout. `ExpandableColumnLayoutDelegate` is a sub-type of `UICollectionViewDelegate` and so inherits any of the required behavior of that protocol. In addition, it adds some required behavior of it's own.
+`ExpanableColumnLayout` relies on an instance of `ExpandableColumnLayoutDelegate` to provide the information it needs to build the layout. `ExpandableColumnLayoutDelegate` is a subtype of `UICollectionViewDelegate` and so inherits any of the required behavior of that protocol. In addition, it adds some required behavior of it's own.
 
 The following two methods _must_ be implemented
 
@@ -59,7 +59,7 @@ optional func collectionView(collectionView: UICollectionView,
     unitHeightForItemAtIndexPath indexPath: NSIndexPath!) -> Int;
 ```
 
-#### ExpandableColumnViewController
+#### ExpandableColumnViewController Implementation
 
 The quickest way to get going is to subclass the provided `ExpandableColumnViewController`. This is the method used in the example project. When you subclass `ExpandableColumnViewController` there are two methods that you need to override in addition to the standard `ExpandableColumnLayoutDelegate` / `UICollectionViewDelegate` / `UICollectionViewDataSource` methods.
 
@@ -80,6 +80,29 @@ optional func collectionView(collectionView: UICollectionView,
   layout expandableColumnLayout: ExpandableColumnLayout,
   sizeForHeaderInSection section: Int) -> CGSize;
 ```
+
+#### Custom Implementation
+
+If you don't want to tie yourself to a specific subtype of `UIViewController`, you'll have to do a bit more work.
+
+First, you'll need to do any bookkeeping of information about expanded sections yourself by providing an implementation of
+
+```swift
+func collectionView(collectionView: UICollectionView,
+  layout expandableColumnLayout: ExpandableColumnLayout,
+  sectionIsExpandedAtIndex section: Int) -> Bool;
+```
+
+You can use the provided `SectionExpander` class to do most of this work for you.
+
+Additionally, you'll need to provide appropriate instances of `ExpandableColumnLayoutHeaderKind` and `ExpandableColumnLayoutSectionBackgroundKind` supplementary views in your implementation of
+
+```swift
+public func collectionView(collectionView: UICollectionView,
+  viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView
+```
+
+ExpandableColumnLayout requires an instance of `ExpandableColumnLayoutSectionBackgroundKind` for every section in the `UICollectionView` to support the drawer animation.
 
 ## Author
 
