@@ -13,12 +13,6 @@ A custom UICollectionViewLayout that provides a flexible column-based layout wit
 
 ![demo](demo.gif)
 
-## Usage
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
 ## Installation
 
 ExpandableColumnLayout is available through [CocoaPods](http://cocoapods.org). To install
@@ -26,6 +20,44 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod "ExpandableColumnLayout"
+```
+
+## Usage
+
+ExpanableColumnLayout relies on an instance of ExpandableColumnLayoutDelegate to provide the information it needs to build the layout. ExpandableColumnLayoutDelegate is a sub-type of UICollectionViewDelegate and so inherits any of the required behavior of that protocol. In addition, it adds some required behavior of it's own.
+
+The following two methods _must_ be implemented
+
+```swift
+func numberOfColumnsInCollectionView(collectionView: UICollectionView,
+  layout expandableColumnLayout: ExpandableColumnLayout,
+  forSectionAtIndex section: Int) -> Int;
+    
+func collectionView(collectionView: UICollectionView,
+  layout expandableColumnLayout: ExpandableColumnLayout,
+  sectionIsExpandedAtIndex section: Int) -> Bool;
+```
+
+There are two ways to integrate ExpandableColumnLayout into your project.
+
+##### Easy Way
+
+The quickest way to get going is to subclass the provided ExpandableColumnViewController. This is the method used in the example project. When you subclass ExpandableColumnViewController there are two methods that you need to override in addition to the standard UICollectionViewDelegate / UICollectionViewDataSource methods.
+
+```swift
+public func numberOfItemsInExpandedSection(section: Int) -> Int {
+  return 5;
+}
+
+public func collectionView(collectionView: UICollectionView,
+  cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    fatalError("Subclasses of ExpandableColumnViewController must override this method.");
+}
+  
+public func numberOfColumnsInCollectionView(collectionView: UICollectionView,
+  layout expandableColumnLayout: ExpandableColumnLayout, forSectionAtIndex section: Int) -> Int {
+    fatalError("Subclasses of ExpandableColumnViewController must override this method.");
+}
 ```
 
 ## Author
