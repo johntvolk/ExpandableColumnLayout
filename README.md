@@ -38,7 +38,7 @@ func collectionView(collectionView: UICollectionView,
   sectionIsExpandedAtIndex section: Int) -> Bool;
 ```
 
-Additionally, `ExpandableColumnLayoutDelegate` instances _must_ provide either an exact height or a unit height for each item in a section. There are two ways to accomplish this (pick whichever makes the most sense for your application).
+Additionally, `ExpandableColumnLayoutDelegate` instances _must_ provide either an exact height or a unit height for each item in a section. There are two ways to accomplish this. Pick whichever makes the most sense for your application.
 
 ```swift
 optional func collectionView(collectionView: UICollectionView,
@@ -59,26 +59,26 @@ optional func collectionView(collectionView: UICollectionView,
     unitHeightForItemAtIndexPath indexPath: NSIndexPath!) -> Int;
 ```
 
-There are two ways to integrate `ExpandableColumnLayout` into your project.
+#### ExpandableColumnViewController
 
-##### Easy Way
-
-The quickest way to get going is to subclass the provided `ExpandableColumnViewController`. This is the method used in the example project. When you subclass `ExpandableColumnViewController` there are two methods that you need to override in addition to the standard UICollectionViewDelegate / UICollectionViewDataSource methods.
+The quickest way to get going is to subclass the provided `ExpandableColumnViewController`. This is the method used in the example project. When you subclass `ExpandableColumnViewController` there are two methods that you need to override in addition to the standard `ExpandableColumnLayoutDelegate` / `UICollectionViewDelegate` / `UICollectionViewDataSource` methods.
 
 ```swift
 public func numberOfItemsInExpandedSection(section: Int) -> Int {
-  return 5;
+  ...
 }
 
-public func collectionView(collectionView: UICollectionView,
-  cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-    fatalError("Subclasses of ExpandableColumnViewController must override this method.");
+public func viewForSupplementaryHeaderElementAtIndexPath(indexPath: NSIndexPath) -> UICollectionReusableView {
+  ...
 }
-  
-public func numberOfColumnsInCollectionView(collectionView: UICollectionView,
-  layout expandableColumnLayout: ExpandableColumnLayout, forSectionAtIndex section: Int) -> Int {
-    fatalError("Subclasses of ExpandableColumnViewController must override this method.");
-}
+```
+
+The method `viewForSupplementaryHeaderElementAtIndexPath:` method only needs to be overriden if you are returning a non-CGZero size from your optional implementation of:
+
+```swift
+optional func collectionView(collectionView: UICollectionView,
+  layout expandableColumnLayout: ExpandableColumnLayout,
+  sizeForHeaderInSection section: Int) -> CGSize;
 ```
 
 ## Author
