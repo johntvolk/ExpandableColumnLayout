@@ -11,6 +11,8 @@ A custom UICollectionViewLayout that provides a flexible column-based layout wit
 * Specifiy unit-height or exact height per item
 * Expand or contract sections via attractive drawer-like animation
 
+![demo](demo.gif)
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
