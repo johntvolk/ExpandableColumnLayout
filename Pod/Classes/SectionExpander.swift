@@ -14,7 +14,7 @@ public class SectionExpander {
     
     public var multipleExpansionEnabled = true;
     
-    public func toggleExpansionForSectionAtIndex(section: Int, inCollectionView collectionView: UICollectionView, withDuration duration: NSTimeInterval) {
+    public func toggleExpansionForSectionAtIndex(section: Int, inCollectionView collectionView: UICollectionView, withAnimationDuration duration: NSTimeInterval) {
         if let dataSource = collectionView.dataSource {
             let itemCount = dataSource.collectionView(collectionView, numberOfItemsInSection: section);
             var itemsToInsert = [NSIndexPath]();
@@ -60,6 +60,14 @@ public class SectionExpander {
                 });
             });
         }
+    }
+    
+    public func expandSectionAtIndex(section: Int) {
+        self.expandedSections.insert(section);
+    }
+    
+    public func collapseSectionAtIndex(section: Int) {
+        self.expandedSections.remove(section);
     }
     
     public func sectionIsExpandedAtIndex(section: Int) -> Bool {

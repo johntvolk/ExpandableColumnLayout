@@ -16,6 +16,8 @@ public class ExpandableColumnViewController: UIViewController, ExpandableColumnL
     
     @IBOutlet public var collectionView: UICollectionView!;
     
+    public var expandAllSections = false;
+    
     public var multipleExpansionEnabled: Bool {
         get {
             return self.sectionExpander.multipleExpansionEnabled;
@@ -74,10 +76,18 @@ public class ExpandableColumnViewController: UIViewController, ExpandableColumnL
     }
     
     public func sectionIsExpandedAtIndex(section: Int) -> Bool {
-        return self.sectionExpander.sectionIsExpandedAtIndex(section);
+        return self.expandAllSections || self.sectionExpander.sectionIsExpandedAtIndex(section);
     }
     
-    public func toggleExpansionForSectionAtIndex(section: Int, withDuration duration: NSTimeInterval) {
-        self.sectionExpander.toggleExpansionForSectionAtIndex(section, inCollectionView: self.collectionView, withDuration: duration);
+    public func toggleExpansionForSectionAtIndex(section: Int, withAnimationDuration duration: NSTimeInterval) {
+        self.sectionExpander.toggleExpansionForSectionAtIndex(section, inCollectionView: self.collectionView, withAnimationDuration: duration);
+    }
+    
+    public func expandSectionAtIndex(section: Int) {
+        self.sectionExpander.expandSectionAtIndex(section);
+    }
+    
+    public func collapseSectionAtIndex(section: Int) {
+        self.sectionExpander.collapseSectionAtIndex(section);
     }
 }
