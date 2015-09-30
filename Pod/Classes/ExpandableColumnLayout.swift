@@ -120,7 +120,7 @@ public class ExpandableColumnLayout: UICollectionViewLayout {
                     
                     var maxSectionHeight: CGFloat = 0.0;
                     
-                    for (column, height) in columnHeights {
+                    for (_, height) in columnHeights {
                         maxSectionHeight = maxSectionHeight < height ? height : maxSectionHeight;
                     }
                     
@@ -149,22 +149,22 @@ public class ExpandableColumnLayout: UICollectionViewLayout {
         return CGSize(width: self.collectionView!.frame.size.width, height: self.totalHeight);
     }
     
-    override public func layoutAttributesForElementsInRect(rect: CGRect) -> [AnyObject]? {
-        var result = [AnyObject]();
+    override public func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+        var result = [UICollectionViewLayoutAttributes]();
 
-        for (indexPath, layoutAttrs) in self.itemLayoutAttrs {
+        for (_, layoutAttrs) in self.itemLayoutAttrs {
             if CGRectIntersectsRect(rect, layoutAttrs.frame) {
                 result.append(layoutAttrs);
             }
         }
         
-        for (indexPath, layoutAttrs) in self.headerLayoutAttrs {
+        for (_, layoutAttrs) in self.headerLayoutAttrs {
             if CGRectIntersectsRect(rect, layoutAttrs.frame) {
                 result.append(layoutAttrs);
             }
         }
         
-        for (indexPath, layoutAttrs) in self.backgroundLayoutAttrs {
+        for (_, layoutAttrs) in self.backgroundLayoutAttrs {
             if CGRectIntersectsRect(rect, layoutAttrs.frame) {
                 result.append(layoutAttrs);
             }
@@ -173,7 +173,7 @@ public class ExpandableColumnLayout: UICollectionViewLayout {
         return result;
     }
     
-    override public func prepareForCollectionViewUpdates(updateItems: [AnyObject]!) {
+    override public func prepareForCollectionViewUpdates(updateItems: [UICollectionViewUpdateItem]) {
         super.prepareForCollectionViewUpdates(updateItems);
         
         if let collectionView = self.collectionView, delegate = collectionView.delegate as? ExpandableColumnLayoutDelegate {
@@ -190,16 +190,16 @@ public class ExpandableColumnLayout: UICollectionViewLayout {
             var earliestSectionUpdate: Int?;
             var earliestItemUpdate: NSIndexPath?;
             
-            for updateItem in updateItems as! [UICollectionViewUpdateItem] { // Collect information about updates.
+            for updateItem in updateItems { // Collect information about updates.
                 if updateItem.updateAction == UICollectionUpdateAction.Insert || updateItem.updateAction == UICollectionUpdateAction.Delete {
-                    if let indexPath = updateItem.updateAction == UICollectionUpdateAction.Insert ? updateItem.indexPathAfterUpdate : updateItem.indexPathBeforeUpdate {
-                        if indexPath.item == NSNotFound {
-                            sectionUpdates[indexPath] = updateItem;
-                            earliestSectionUpdate = self.findEarliestSectionUpdate(earliestSectionUpdate, candidateUpdate: indexPath.section);
-                        } else {
-                            itemUpdates[indexPath] = updateItem;
-                            earliestItemUpdate = self.findEarliestItemUpdate(earliestItemUpdate, candidateUpdate: indexPath);
-                        }
+                    let indexPath = updateItem.updateAction == UICollectionUpdateAction.Insert ? updateItem.indexPathAfterUpdate : updateItem.indexPathBeforeUpdate;
+                    
+                    if indexPath.item == NSNotFound {
+                        sectionUpdates[indexPath] = updateItem;
+                        earliestSectionUpdate = self.findEarliestSectionUpdate(earliestSectionUpdate, candidateUpdate: indexPath.section);
+                    } else {
+                        itemUpdates[indexPath] = updateItem;
+                        earliestItemUpdate = self.findEarliestItemUpdate(earliestItemUpdate, candidateUpdate: indexPath);
                     }
                 }
             }
@@ -461,12 +461,12 @@ public class ExpandableColumnLayout: UICollectionViewLayout {
         return nil;
     }
     
-    override public func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes! {
+    override public func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
         return self.itemLayoutAttrs[indexPath];
     }
     
     override public func layoutAttributesForSupplementaryViewOfKind(elementKind: String,
-        atIndexPath indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes! {
+        atIndexPath indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
             return elementKind == ExpandableColumnLayoutHeaderKind ? self.headerLayoutAttrs[indexPath] : self.backgroundLayoutAttrs[indexPath];
     }
 }

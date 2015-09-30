@@ -14,7 +14,7 @@ public class SectionExpander {
     
     public var multipleExpansionEnabled = true;
     
-    public func toggleExpansionForSectionAtIndex(section: Int, inCollectionView collectionView: UICollectionView, withAnimationDuration duration: NSTimeInterval) {
+    public func toggleExpansionForSectionAtIndex(section: Int, inCollectionView collectionView: UICollectionView, animated: Bool, withDuration duration: NSTimeInterval?) {
         if let dataSource = collectionView.dataSource {
             let itemCount = dataSource.collectionView(collectionView, numberOfItemsInSection: section);
             var itemsToInsert = [NSIndexPath]();
@@ -23,16 +23,20 @@ public class SectionExpander {
             if self.expandedSections.contains(section) {
                 self.expandedSections.remove(section);
                 
-                for i in 0 ..< itemCount {
-                    itemsToDelete.append(NSIndexPath(forItem: i, inSection: section));
+                if animated {
+                    for i in 0 ..< itemCount {
+                        itemsToDelete.append(NSIndexPath(forItem: i, inSection: section));
+                    }
                 }
             } else {
                 if !self.multipleExpansionEnabled {
-                    for expandedSection in self.expandedSections {
-                        let itemCount = dataSource.collectionView(collectionView, numberOfItemsInSection: expandedSection);
-                        
-                        for i in 0 ..< itemCount {
-                            itemsToDelete.append(NSIndexPath(forItem: i, inSection: expandedSection));
+                    if animated {
+                        for expandedSection in self.expandedSections {
+                            let itemCount = dataSource.collectionView(collectionView, numberOfItemsInSection: expandedSection);
+                            
+                            for i in 0 ..< itemCount {
+                                itemsToDelete.append(NSIndexPath(forItem: i, inSection: expandedSection));
+                            }
                         }
                     }
                     
@@ -41,33 +45,29 @@ public class SectionExpander {
                 
                 self.expandedSections.insert(section);
                 
-                let itemCount = dataSource.collectionView(collectionView, numberOfItemsInSection: section);
-                
-                for i in 0 ..< itemCount {
-                    itemsToInsert.append(NSIndexPath(forItem: i, inSection: section));
+                if animated {
+                    let itemCount = dataSource.collectionView(collectionView, numberOfItemsInSection: section);
+                    
+                    for i in 0 ..< itemCount {
+                        itemsToInsert.append(NSIndexPath(forItem: i, inSection: section));
+                    }
                 }
             }
             
-            UIView.animateWithDuration(duration, animations: { () -> Void in
-                collectionView.performBatchUpdates({ () -> Void in
-                    collectionView.insertItemsAtIndexPaths(itemsToInsert);
-                    collectionView.deleteItemsAtIndexPaths(itemsToDelete);
-                }, completion: { [weak self] (finished: Bool) -> Void in
-                    if let firstInsert = itemsToInsert.first {
-                        collectionView.scrollToItemAtIndexPath(firstInsert,
-                            atScrollPosition: UICollectionViewScrollPosition.CenteredVertically, animated: true);
-                    }
+            if animated {
+                UIView.animateWithDuration(duration ?? 0.25, animations: { () -> Void in
+                    collectionView.performBatchUpdates({ () -> Void in
+                        collectionView.insertItemsAtIndexPaths(itemsToInsert);
+                        collectionView.deleteItemsAtIndexPaths(itemsToDelete);
+                    }, completion: { (finished: Bool) -> Void in
+                        if let firstInsert = itemsToInsert.first {
+                            collectionView.scrollToItemAtIndexPath(firstInsert,
+                                atScrollPosition: UICollectionViewScrollPosition.CenteredVertically, animated: true);
+                        }
+                    });
                 });
-            });
+            }
         }
-    }
-    
-    public func expandSectionAtIndex(section: Int) {
-        self.expandedSections.insert(section);
-    }
-    
-    public func collapseSectionAtIndex(section: Int) {
-        self.expandedSections.remove(section);
     }
     
     public func sectionIsExpandedAtIndex(section: Int) -> Bool {

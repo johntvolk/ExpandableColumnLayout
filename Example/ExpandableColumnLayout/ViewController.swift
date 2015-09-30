@@ -96,7 +96,7 @@ class ViewController: ExpandableColumnViewController {
     }
     
     func headerTapped(recognizer: HeaderTapRecognizer) {
-        self.toggleExpansionForSectionAtIndex(recognizer.section, withDuration: 0.5);
+        self.toggleExpansionForSectionAtIndex(recognizer.section, animated: true, withDuration: 0.5);
     }
     
     @IBAction func expansionToggled(sender: AnyObject) {
