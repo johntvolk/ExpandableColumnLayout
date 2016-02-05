@@ -194,12 +194,14 @@ public class ExpandableColumnLayout: UICollectionViewLayout {
                 if updateItem.updateAction == UICollectionUpdateAction.Insert || updateItem.updateAction == UICollectionUpdateAction.Delete {
                     let indexPath = updateItem.updateAction == UICollectionUpdateAction.Insert ? updateItem.indexPathAfterUpdate : updateItem.indexPathBeforeUpdate;
                     
-                    if indexPath.item == NSNotFound {
-                        sectionUpdates[indexPath] = updateItem;
-                        earliestSectionUpdate = self.findEarliestSectionUpdate(earliestSectionUpdate, candidateUpdate: indexPath.section);
-                    } else {
-                        itemUpdates[indexPath] = updateItem;
-                        earliestItemUpdate = self.findEarliestItemUpdate(earliestItemUpdate, candidateUpdate: indexPath);
+                    if(indexPath != nil) {
+                        if indexPath!.item == NSNotFound {
+                            sectionUpdates[indexPath!] = updateItem;
+                            earliestSectionUpdate = self.findEarliestSectionUpdate(earliestSectionUpdate, candidateUpdate: indexPath!.section);
+                        } else {
+                            itemUpdates[indexPath!] = updateItem;
+                            earliestItemUpdate = self.findEarliestItemUpdate(earliestItemUpdate, candidateUpdate: indexPath!);
+                        }
                     }
                 }
             }
