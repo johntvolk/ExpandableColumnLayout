@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "ExpandableColumnLayout"
-  s.version          = "1.0.0"
+  s.version          = "1.0.1"
   s.summary          = "A custom UICollectionViewLayout that provides a flexible column-based layout with optional expandable drawer functionality."
   s.description      = <<-DESC
                        * Arbitrary column count per section
