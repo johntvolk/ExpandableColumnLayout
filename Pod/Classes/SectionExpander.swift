@@ -60,9 +60,11 @@ public class SectionExpander {
                         collectionView.insertItemsAtIndexPaths(itemsToInsert);
                         collectionView.deleteItemsAtIndexPaths(itemsToDelete);
                     }, completion: { (finished: Bool) -> Void in
-                        if let firstInsert = itemsToInsert.first {
-                            collectionView.scrollToItemAtIndexPath(firstInsert,
-                                atScrollPosition: UICollectionViewScrollPosition.CenteredVertically, animated: true);
+                        if let firstInsert = itemsToInsert.first where firstInsert.section < collectionView.numberOfSections() &&
+                            firstInsert.item < collectionView.numberOfItemsInSection(firstInsert.section) {
+                                collectionView.numberOfSections() > firstInsert.section
+                                collectionView.scrollToItemAtIndexPath(firstInsert,
+                                    atScrollPosition: UICollectionViewScrollPosition.CenteredVertically, animated: true);
                         }
                     });
                 });
